@@ -7,18 +7,30 @@ function goToRegistration() {
 }
 
 function login() {
+    window.open("main.html", "_self");
 
-    const params = {
-        username: document.querySelector('#username').value,
-        password: document.querySelector('#password').value
-    }
+    // var urlApi = 'http://91.234.37.244:8080';
+    // var login = $('#username').val();
+    // var password = $('#password').val();
+    //
+    // $.ajax({
+    //     type: "POST",
+    //     beforeSend: function (request) {
+    //         request.setRequestHeader("Access-Control-Allow-Origin", '*');
+    //     },
+    //     url: urlApi + "/nynja/login",
+    //     data: {username: login, password: password},
+    //
+    //     success: function (d) {
+    //         console.log('Success');
+    //
+    //     },
+    //     fail: function (error) {
+    //         console.log('Error with balance');
+    //     }
+    // });
+}
 
-    var request = new XMLHttpRequest();
-    request.open('POST', 'http://91.234.37.244:8080/nynja/login');
-    request.setRequestHeader('Access-Control-Allow-Origin', '*')
-    request.send(JSON.stringify(params))
-
-    request.onload = function () {
-        alert(request.responseText)
-    }
+function register() {
+    window.open("main.html", "_self");
 }
